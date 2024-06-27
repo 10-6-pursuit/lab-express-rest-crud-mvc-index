@@ -1,12 +1,12 @@
 // Dependencies
 const express = require("express");
-const persons = express.Router();
-const personsArray = require("../models/person.model.js");
+const people = express.Router();
+const peopleArray = require("../models/person.model.js");
 
 // Index
-persons.get("/", (req, res) => {
-    res.json(personsArray);
+people.get("/", (req, res) => {
+    res.json(peopleArray);
   });
 
 // Export
-module.exports = persons;
+module.exports = people;

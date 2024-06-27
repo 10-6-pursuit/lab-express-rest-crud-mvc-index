@@ -21,6 +21,10 @@ app.use("/machines", machinesController);
 app.use("/plans", plansController);
 app.use("/special-events", specialeventsController);
 
+app.get("*", (request, response) => {
+    response.json({error: "Sorry, no page found!"});
+});
+
 
 
 //Export

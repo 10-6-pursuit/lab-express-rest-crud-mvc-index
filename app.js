@@ -6,14 +6,14 @@ app.use("/locations", locationsController);
 const machinesController = require("./controllers/machines.controller");
 app.use("/equipment", machinesController);
 
-// const personsController = require("./controllers/persons.controller");
-// app.use("/people", personsController);
+const personsController = require("./controllers/persons.controller");
+app.use("/people", personsController);
 
-// const plansController = require("./controllers/plans.controller");
-// app.use("/plans", plansController);
+const plansController = require("./controllers/plans.controller");
+app.use("/plans", plansController);
 
-// const specialEventsController = require("./controllers/special-events.controller");
-// app.use("/special-events", specialEventsController);
+const specialEventsController = require("./controllers/special-events.controller");
+app.use("/special-events", specialEventsController);
 
 app.get("/", (req, res) => {
 	res.send("Lab-express-rest-crud-mvc");

@@ -20,4 +20,7 @@ app.use("/plans", plansController);
 const machinesController = require("./controllers/machines.controller");
 app.use("/machines", machinesController);
 
+const specialEventsController = require("./controllers/special-events.controller");
+app.use("/special-events", specialEventsController);
+
 module.exports = app;

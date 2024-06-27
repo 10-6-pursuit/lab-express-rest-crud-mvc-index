@@ -1,7 +1,10 @@
-const express = require("express")
-const locationsData = require("../models/location.model")
-const locations = express.Router()
+const express = require("express");
+const locationsData = require("../models/location.model");
+const locations = express.Router();
 
 locations.get("/", (req, res) => {
-  res.json(locationsData)
-})
+	res.json(locationsData);
+});
+
+
+module.exports = locations

@@ -17,4 +17,7 @@ app.use("/persons", personsController);
 const plansController = require("./controllers/plans.controller");
 app.use("/plans", plansController);
 
+const machinesController = require("./controllers/machines.controller");
+app.use("/machines", machinesController);
+
 module.exports = app;

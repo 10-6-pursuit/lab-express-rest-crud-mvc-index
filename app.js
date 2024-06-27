@@ -23,4 +23,8 @@ app.use("/machines", machinesController);
 const specialEventsController = require("./controllers/special-events.controller");
 app.use("/special-events", specialEventsController);
 
+app.get("/:whatever", (req, res) => {
+    res.status(404).send("404 Sorry, page not found!")
+});
+
 module.exports = app;

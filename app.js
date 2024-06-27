@@ -16,8 +16,8 @@ const plansController = require("./controllers/plans.controller.js");
 const specialEventsController = require("./controllers/special-events.controller.js");
 
 app.use("/locations", locationsController);
-app.use("/equipment", equipmentController);
-app.use("/people", peopleController);
+app.use("/machines", equipmentController);
+app.use("/persons", peopleController);
 app.use("/plans", plansController);
 app.use("/special-events", specialEventsController);
 

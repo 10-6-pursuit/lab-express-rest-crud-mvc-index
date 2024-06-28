@@ -8,4 +8,7 @@ app.get("/", (req, res) => {
 const locationController = require("./controllers/locations.controller.js");
 app.use("/locations", locationController);
 
+const machineController = require("./controllers/machines.controller.js");
+app.use("/machines", machineController);
+
 module.exports = app;

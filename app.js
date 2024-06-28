@@ -3,6 +3,9 @@ const app = express();
 
 app.get("/", (req, res) => {
     res.send("Hello World");
-  });
+});
 
-  module.exports = app;
+const locationController = require("./controllers/locations.controller.js");
+app.use("/locations", locationController);
+
+module.exports = app;

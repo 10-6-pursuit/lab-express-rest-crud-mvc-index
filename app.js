@@ -17,4 +17,7 @@ app.use("/people", peopleController);
 const plansController = require("./controllers/plans.controller.js");
 app.use("/plans", plansController);
 
+const specialEventsController = require("./controllers/special-events.controller.js");
+app.use("/specialEvents", specialEventsController);
+
 module.exports = app;

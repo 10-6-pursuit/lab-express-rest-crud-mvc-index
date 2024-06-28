@@ -12,4 +12,3 @@ module.exports = [
       zip: "11011",
     },
   ];
-  

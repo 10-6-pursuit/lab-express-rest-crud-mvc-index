@@ -24,6 +24,8 @@ app.get("/", (req, res) => {
   const plansController = require("./controllers/plans.controller.js")
   app.use("/plans", plansController);
 
-
+  app.get("*", (req, res) => {
+    res.status(404).json({ error: "Sorry, no page found!" });
+  });
 
   module.exports = app;

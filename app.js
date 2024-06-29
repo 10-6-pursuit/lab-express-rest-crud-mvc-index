@@ -20,4 +20,8 @@ app.use("/plans", plansController);
 const specialEventsController = require("./controllers/special-events.controller.js");
 app.use("/special-events", specialEventsController);
 
+app.get("*", (req, res) => {
+    res.json({ error: "Page not found" });
+});
+
 module.exports = app;

@@ -7,7 +7,7 @@ locations.get("/", (req, res) => {
 });
 
 locations.get("/people", (req, res) => {
-    const people = locationsArray.map((location) => location.people);
+    const people = locationsArray.map(location => location.people);
     res.json(people);
 })
 

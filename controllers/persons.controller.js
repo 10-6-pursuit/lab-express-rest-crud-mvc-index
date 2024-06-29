@@ -1,9 +1,9 @@
 const express = require("express");
-const people = express.Router();
-const peopleArray = require("../models/person.model.js");
+const persons = express.Router();
+const personsArray = require("../models/person.model.js");
 
-people.get("/", (req, res) => {
-    res.json(peopleArray);
+persons.get("/", (req, res) => {
+    res.json(personsArray);
 });
 
-module.exports = people;
+module.exports = persons;

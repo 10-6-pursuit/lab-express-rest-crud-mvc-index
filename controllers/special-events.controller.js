@@ -1,9 +1,9 @@
 const express = require('express');
 const router = express.Router();
-const plansArray = require('../models/plan');
+const specialEventsArray = require('../models/special-event.model');
 
 router.get('/', (req, res) => {
-  res.status(200).send(plansArray);
+  res.status(200).send(specialEventsArray);
 });
 
 module.exports = router;

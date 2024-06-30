@@ -1,9 +1,9 @@
 const express = require('express');
 const router = express.Router();
-const locationArray = require('../models/location');
+const machineArray = require('../models/machine.model');
 
 router.get("/", (req, res) => {
-    res.status(200).send(locationArray)
+    res.status(200).send(machineArray)
 })
 
 module.exports = router;

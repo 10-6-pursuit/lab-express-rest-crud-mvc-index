@@ -25,7 +25,11 @@ const plansController = require('./controllers/plansController');
 app.use('/plans', plansController);
 
 // special events
-const specialEventsController = require("./controllers/specialEventsController")
-app.use("/specialevents", specialEventsController)
+const specialEventsController = require('./controllers/specialEventsController');
+app.use('/specialevents', specialEventsController);
+
+app.get('*', (req, res) => {
+  res.status(404).send({ error: 'Not found' });
+});
 
 module.exports = app;

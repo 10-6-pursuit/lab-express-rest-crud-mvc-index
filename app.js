@@ -20,4 +20,8 @@ app.use('/machines', machinesController);
 const personsController = require('./controllers/personsController');
 app.use('/persons', personsController);
 
+// plans
+const plansController = require('./controllers/plansController');
+app.use('/plans', plansController);
+
 module.exports = app;

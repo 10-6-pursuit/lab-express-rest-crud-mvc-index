@@ -11,4 +11,7 @@ app.get('/', (req, res) => {
 const locationsController = require('./controllers/locationsController');
 app.use('/locations', locationsController);
 
+const machinesController = require('./controllers/machinesController');
+app.use('/machines', machinesController);
+
 module.exports = app;

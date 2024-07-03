@@ -1,4 +1,7 @@
-[
+
+
+module.exports= [
+
     {
       street: "45 Davis Street",
       city: "Long Island City",

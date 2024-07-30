@@ -20,7 +20,7 @@ app.use("/plans", plansController);
 
 app.use("/special-events", eventsController);
 
-app.get("*", (req,res) => {
+app.use("*", (req,res) => {
     res.status(404).json({error:"Page not found"})
 })
 

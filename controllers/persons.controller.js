@@ -1,9 +1,9 @@
-const express = require('express');
-const router = express.Router();
-const persons = require('../models/person.model');
+const express = require('express')
+const personsController = express.Router()
+const personModel = require('../models/person.model')
 
-router.get('/people', (req, res) => {
-    res.json(persons);
-});
+personsController.get('/', (req, res) => {
+  res.json(personModel)
+})
 
-module.exports = router;
+module.exports = personsController

@@ -1,9 +1,9 @@
-const express = require('express');
-const router = express.Router();
-const specialEvents = require('../models/special-event.model');
+const express = require('express')
+const eventsController = express.Router()
+const eventModel = require('../models/special-event.model')
 
-router.get('/special-events', (req, res) => {
-    res.json(specialEvents);
-});
+eventsController.get('/', (req, res) => {
+  res.json(eventModel)
+})
 
-module.exports = router;
+module.exports = eventsController

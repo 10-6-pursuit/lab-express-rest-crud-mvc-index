@@ -1,9 +1,19 @@
-const express = require('express');
-const router = express.Router();
-const locations = require('../models/location.model');
+const express = require('express')
+const locationsController = express.Router()
+const locationModel = require('../models/location.model')
 
-router.get('/locations', (req, res) => {
-    res.json(locations);
-});
+locationsController.get('/', (req, res) => {
+  res.json(locationModel)
+})
 
-module.exports = router;
+locationsController.get('/people', (req, res) => {
+  const personModel = require('../models/person.model')
+  const locationsWithPeople = locationModel.map(location => {
+    location.members = personModel.filter(person => (
+      person.mainLocation === location.zip
+    ))
+  })
+  res.json(locationModel)
+})
+
+module.exports = locationsController

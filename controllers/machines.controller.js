@@ -1,9 +1,9 @@
-const express = require('express');
-const router = express.Router();
-const machines = require('../models/machine.model');
+const express = require('express')
+const machinesController = express.Router()
+const machineModel = require('../models/machine.model')
 
-router.get('/equipment', (req, res) => {
-    res.json(machines);
-});
+machinesController.get('/', (req, res) => {
+  res.json(machineModel)
+})
 
-module.exports = router;
+module.exports = machinesController
